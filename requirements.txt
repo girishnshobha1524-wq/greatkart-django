@@ -1,0 +1,27 @@
+# requirements.txt
+# ------------------------------------------------------------
+# This file contains all Python dependencies required
+# to run the GreatKart Django E-commerce project.
+#
+# It allows anyone to recreate the same project environment
+# using the command:
+#     pip install -r requirements.txt
+#
+# This ensures consistency, dependency management,
+# and easy project setup across different systems.
+# ------------------------------------------------------------
+
+# Main Django Web Framework
+Django>=4.2,<5.1
+
+# Required internally by Django (ASGI support)
+asgiref>=3.7
+
+# SQL query parsing utility used by Django
+sqlparse>=0.4
+
+# Timezone support for date and time handling
+tzdata>=2023.3
+
+# Required for handling ImageField (Product images)
+pillow>=10.0

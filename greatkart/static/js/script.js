@@ -51,8 +51,10 @@ $(document).ready(function() {
 		$('[data-toggle="tooltip"]').tooltip()
 	} // end if
 
-
-
+	// Auto hide messages after 3 seconds
+	setTimeout(function() {
+		$('#message').fadeOut('slow');
+	}, 3000);
 
     
 }); 

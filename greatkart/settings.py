@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uup5^a-azmdlxt@3@3c78pc5bg=9s@(s46*i_%$(td2%b+br23
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -140,9 +140,16 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
-# SMTP configuration
+# SMTP configuration - Gmail (Real emails)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587    
-EMAIL_HOST_USER = 'girish@webenoid.com'
-EMAIL_HOST_PASSWORD = 'giri@1234'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'girishnshobha@gmail.com'
+EMAIL_HOST_PASSWORD = 'bhrhbeoyfjldbzyb'  # App Password (bhrh beoy fjld bzyb without spaces)
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'girishnshobha@gmail.com'
+
+# CSRF Settings
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'http://localhost:8000']
+CSRF_COOKIE_SAMESITE = None
+SESSION_COOKIE_SAMESITE = None
